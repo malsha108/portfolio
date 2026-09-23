@@ -1,44 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Malsha Pathirana — UI/UX</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Portfolio of Malsha Pathirana, HNDIT student specializing in IT Support and UI/UX Design.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛰️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-:root{--bg:#F5F3EF;--surface:#fff;--surface-2:#EFEDE7;--text:#181A1E;--dim:#5B6067;--line:rgba(24,26,30,.1);--accent:#1F7A6C;--accent-soft:rgba(31,122,108,.12);--r:16px}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.6}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}.kicker{font-family:'IBM Plex Mono';font-size:12px;color:var(--accent);margin-bottom:10px;letter-spacing:1px}
-header{position:sticky;top:0;z-index:10;background:rgba(245,243,239,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.navbar{height:64px;display:flex;justify-content:space-between;align-items:center}
-.nav-links{display:flex;gap:24px;list-style:none}.nav-links a{text-decoration:none;color:var(--dim);font-size:14px}.btn{padding:10px 18px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-weight:600;font-size:14px;display:inline-flex;gap:8px;align-items:center;cursor:pointer;background:#fff;color:var(--text)}.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-.hero{padding:80px 0}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.hero h1{font-family:'Space Grotesk';font-size:52px;line-height:1}.hero h1 span{display:block;font-family:'IBM Plex Mono';font-size:16px;color:var(--dim);margin-top:12px}
-.photo-frame{width:280px;height:280px;border-radius:40% 60% 60% 40%/50%;overflow:hidden;border:1px solid var(--line);margin:0 auto;background:var(--surface-2)}
-.photo-frame img{width:100%;height:100%;object-fit:cover}
-.section{padding:80px 0}.section-title{font-family:'Space Grotesk';font-size:36px}
-.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
-.proj-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
-.proj-thumb{aspect-ratio:16/10;background:var(--surface-2)}.proj-thumb img{width:100%;height:100%;object-fit:cover}
-.proj-body{padding:18px}.tech-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.tech-row span{font-size:11px;padding:4px 8px;background:var(--surface-2);border-radius:6px}
-@media(max-width:800px){.hero-grid,.proj-grid{grid-template-columns:1fr}.nav-links{display:none}}
-</style>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<header><div class="wrap navbar"><a class="brand" style="font-weight:700">M.PATHIRANA</a><ul class="nav-links"><li><a href="#home">Home</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div></header>
-<section class="hero" id="home"><div class="wrap hero-grid"><div><div class="kicker">HELLO, I'M</div><h1>Malsha Pathirana<span>Aspiring UI/UX Designer</span></h1><p style="color:var(--dim);margin-top:16px">HNDIT Student from Sri Lanka 🇱🇰 Learning Figma and creating user-friendly designs.</p><div style="margin-top:20px"><a href="#projects" class="btn btn-primary"><i class="fa-solid fa-diagram-project"></i> View Projects</a></div></div><div class="photo-frame"><img src="./Ml.jpeg" alt="Malsha" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400'"></div></div></section>
-<section class="section" id="projects"><div class="wrap"><div class="kicker">SELECTED WORK</div><h2 class="section-title">Featured Projects</h2><div class="proj-grid" id="projGrid"></div></div></section>
-<section class="section" id="contact" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap"><h2 class="section-title">Let's build together.</h2><p style="color:var(--dim)">malshahansamali04@gmail.com</p><p><a href="https://github.com/malsha108" class="btn" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></p></div></section>
-<script>
-const projects=[
-{name:"Hotel Management System",short:"Java Swing desktop app for hotel operations.",tech:["Java","MySQL"],img:"./HHH.PNG"},
-{name:"FoodHub - UI/UX",short:"Food delivery app concept in Figma.",tech:["Figma","UI/UX"],img:"./Untitled-edited.jpg"},
-{name:"InternHub",short:"Internship portal for Sri Lankan students.",tech:["Figma","Prototype"],img:"./Untitled%20(1).png"}
-];
-document.getElementById('projGrid').innerHTML=projects.map(p=>`
-<div class="proj-card"><div class="proj-thumb"><img src="${p.img}" alt="${p.name}" onerror="this.src='https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600'"></div><div class="proj-body"><h3>${p.name}</h3><p style="color:var(--dim);font-size:14px">${p.short}</p><div class="tech-row">${p.tech.map(t=>`<span>${t}</span>`).join('')}</div></div></div>
-`).join('');
-</script>
-</body>
-</html>
+<header>
+  <div class="wrap navbar">
+    <a href="#home" class="brand"><span class="dot"></span>M.PATHIRANA</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="icon-btn" href="https://github.com/malsha108" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a class="icon-btn" href="mailto:malshahansamali04@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"><i class="fa-regular fa-moon"></i></button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">HELLO, I'M</div>
+      <h1>Malsha Pathirana<span class="role">Aspiring UI/UX Designer</span></h1>
+      <p class="lede">HNDIT Student from Sri Lanka 🇱🇰 Aspiring UI/UX Designer and Learning Figma and creating user-friendly designs. I’m passionate about UI/UX design and currently learning to create clean , user-friendly and accessible digital experiences. I enjoy understanding user needs and turning ideas into beautiful , functional designs..</p>
+      <div class="btn-row">
+        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-diagram-project"></i> View My Projects</a>
+        <a href="./assets/cv/Malsha-Pathirana-CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-regular fa-file-lines"></i> View My CV</a>
+        <a href="./assets/cv/Malsha-Pathirana-CV.pdf" download="Malsha-Pathirana-CV.pdf" class="btn btn-ghost"><i class="fa-solid fa-download"></i> Download CV</a>
+      </div>
+      <div class="hero-socials">
+        <a class="icon-btn" href="https://github.com/malsha108" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="icon-btn" href="mailto:malshahansamali04@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ping p1"></div>
+      <div class="ping p2"></div>
+      <div class="ping p3"></div>
+      <div class="photo-frame">
+        <img src="./Ml.jpeg" alt="Malsha Pathirana profile photo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">WHO I AM</div>
+      <h2 class="section-title">Curious about user needs and passionate about creating intuitive, user-friendly designs.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I’m currently pursuing my Higher National Diploma in Information Technology (HNDIT) at SLIATE, Sri Lanka with a strong interest in UI/UX design.
+
+I’m passionate about creating clean, user-friendly and accessible digital experiences. I enjoy understanding user needs, identifying design problems and turning ideas into intuitive interfaces and interactive prototypes using Figma.</p>
+
+<p>Through hands-on design projects and case studies, I’m developing my skills in wireframing, prototyping, user flows and responsive design.
+
+I’m eager to continue learning, improve my design skills and gain practical experience through a UI/UX Design Internship.
+</p>
+      </div>
+      <div class="info-cards reveal">
+        <div class="info-card"><i class="fa-solid fa-graduation-cap"></i><span>HNDIT Student</span></div>
+        <div class="info-card"><i class="fa-solid fa-pen-ruler"></i><span>UI/UX Design</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">WHAT I WORK WITH</div>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-sub">Tools and languages I use across support, development and design work.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h3>Programming &amp; Web</h3>
+        <div class="chip-row">
+          <span class="chip">Java</span>
+          <span class="chip">C# (basic)</span>
+          <span class="chip">HTML5</span><span class="chip">CSS</span><span class="chip">WordPress (basic)</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Database</h3>
+        <div class="chip-row"><span class="chip">SQL</span><span class="chip">MySQL</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Tools &amp; Version Control</h3>
+        <div class="chip-row"><span class="chip">GitHub</span><span class="chip">VS Code</span><span class="chip">NetBeans</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Design &amp; UI/UX</h3>
+        <div class="chip-row"><span class="chip">Figma</span><span class="chip">Auto Layout</span><span class="chip">Prototyping</span><span class="chip">Component Systems</span></div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Ways of Working</h3>
+        <div class="chip-row"><span class="chip">Problem Solving</span><span class="chip">Communication</span><span class="chip">Quick Learning</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="proj-head reveal">
+      <div>
+        <div class="kicker">SELECTED WORK</div>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <p class="section-sub" style="margin-top:0;">A mix of applied software development and UI/UX case study work.</p>
+    </div>
+    <div class="proj-grid" id="projGrid"></div>
+    <div class="pagination" id="projPagination"></div>
+  </div>
+</section>
+
+<div class="modal-backdrop" id="projModalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalCloseBtn" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<section class="section" id="certifications" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker">CONTINUOUS LEARNING</div>
+      <h2 class="section-title">Certifications</h2>
+    </div>
+    <div class="cert-grid" id="certGrid"></div>
+    <div class="view-more-wrap">
